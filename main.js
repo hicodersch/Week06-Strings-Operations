@@ -24,13 +24,16 @@ console.log(upperFirstLetter);
 
 // 10X10 Matris
 let numberList = [];
-for (let index = 1; index <= 100; index++) {
+let totalString = "";
+for (var i = 1; i <= 100; i++) {
     numberList.push(i);
     if (i % 10 == 0) {
-        numberList.push("\n")
+        totalString += numberList.join(",") + "\n"; 
+        numberList.length = 0;
     }
 }
-console.log(numberList.join(','));
+console.log(totalString);
+
 
 // Asal sayilari bulma
 const MAX_BOUNDARY = 100;
@@ -54,7 +57,7 @@ const PASSWORD_MIN = 16;
 const charset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz.!'^+%&/()=?_";
 for (let index = 0; index < NUMBER_OF_PASSWORD; index++) {
     let passwordLength = Math.floor(Math.random() * (PASSWORD_MAX - PASSWORD_MIN)) + PASSWORD_MIN;
-let randomPassword = '';
+    let randomPassword = '';
 for (let passwordIndex = 0; passwordIndex < passwordLength; passwordIndex++) {
     let randomNumber = Math.floor(Math.random() * charset.length);
     randomPassword += charset.substr(randomNumber,1);
