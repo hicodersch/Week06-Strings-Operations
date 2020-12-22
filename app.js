@@ -26,8 +26,8 @@ console.log(upperFirstLetter);
 let numberList = [];
 let totalString = "";
 for (let index = 1; index <= 100; index++) {
-    numberList.push(i);
-    if (i % 10 == 0) {
+    numberList.push(index);
+    if (index % 10 == 0) {
         totalString += numberList.join(",") + "\n"; 
         numberList.length = 0;
     }
